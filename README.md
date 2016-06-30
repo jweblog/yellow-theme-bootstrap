@@ -12,6 +12,11 @@ This plugin requires the [Yellow jQuery Plugin](https://github.com/nogginfuel/ye
 
 ## Configuration
 
+This plugin supports the following changes in system/config/config.ini file:
+
+* Set `Theme: bootstrap` to use the Bootstrap/Bootswatch theme.
+* Set `Navigation: navigation-bootstrap` to use the Bootstrap/Bootswatch navigation bar.
+
 `bootstrapCdnCSS` and `bootstrapCdnJS` settings point to the [Bootstrap CDN](https://www.bootstrapcdn.com/) v3.3.6 by default.
 
 If you need to change the default CDN URLs, you can add one or both key settings in system/config/config.ini.
