@@ -1,0 +1,15 @@
+/* Theme:    Bootstrap theme */
+/* Version:  0.0.1 */
+/* Designer: Andrea Zanellato */
+
+body {
+	padding-top:50px;
+	margin:1em;
+}
+.sitename-logo {
+	display:inline-block;
+	background-image:url(assets/icon.png);
+	background-size:cover;
+	width:42px; height:42px; margin:4px 0 0 0;
+	vertical-align:baseline;
+}
