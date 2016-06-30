@@ -4,13 +4,17 @@
 
 class YellowBootstrap
 {
-	const Version = "0.0.2";
+	const Version = "0.0.3";
 	var $yellow;
 
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		if(!$this->yellow->config->isExisting("jqueryCdn"))
+		{
+		   $this->yellow->config->setDefault("jqueryCdn", "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/");
+		}
 		if(!$this->yellow->config->isExisting("bootstrapCdnCSS"))
 		{
 			$this->yellow->config->setDefault("bootstrapCdnCSS", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
@@ -27,11 +31,13 @@ class YellowBootstrap
 		$output = NULL;
 		if($name == "header")
 		{
-			$bsCSS  = $this->yellow->config->get("bootstrapCdnCSS");
-			$bsJS   = $this->yellow->config->get("bootstrapCdnJS");
+			$jqCDN = $this->yellow->config->get("jqueryCdn");
+			$bsJS  = $this->yellow->config->get("bootstrapCdnJS");
+			$bsCSS = $this->yellow->config->get("bootstrapCdnCSS");
 
-			$output .= "<link rel=\"stylesheet\" href=\"{$bsCSS}\">\n";
+			$output .= "<script type=\"text/javascript\" src=\"{$jqCDN}jquery.min.js\"></script>\n";
 			$output .= "<script type=\"text/javascript\" src=\"{$bsJS}\"></script>\n";
+			$output .= "<link rel=\"stylesheet\" href=\"{$bsCSS}\">\n";
 		}
 		return $output;
 	}
