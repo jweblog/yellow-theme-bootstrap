@@ -1,6 +1,6 @@
 # YellowBootstrap
 
-[Bootstrap](http://getbootstrap.com/) framework and [Bootswatch](http://bootswatch.com/) themes integration for the [yellow](https://github.com/datenstrom/yellow) flat-file CMS system.
+[Bootstrap](http://getbootstrap.com/) framework and [Bootswatch](http://bootswatch.com/) themes integration for the [Yellow](https://github.com/datenstrom/yellow) flat-file CMS system.
 
 This plugin requires the [Yellow jQuery Plugin](https://github.com/nogginfuel/yellow-plugin-jquery) to work properly.
 
