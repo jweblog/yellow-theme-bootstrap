@@ -4,6 +4,8 @@
 
 This plugin requires the [Yellow jQuery Plugin](https://github.com/nogginfuel/yellow-plugin-jquery) to work properly.
 
+![](bootswatch-united.png)
+
 ## Installation
 
 * Copy `bootstrap.php` plugin file into system/plugins folder.
