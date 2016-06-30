@@ -23,5 +23,5 @@ If you need to change the default CDN URLs, you can add one or both key settings
 
 The following example sets the CMS to use the [cerulean](http://bootswatch.com/cerulean/) v3.3.6 Bootswatch theme:
 ```
-bootstrapCdnCSS: https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css
+bootstrapCdnCSS: https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/
 ```
