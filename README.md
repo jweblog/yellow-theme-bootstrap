@@ -1,1 +1,22 @@
-# yellow-bootstrap
+# YellowBootstrap
+
+[Bootstrap](http://getbootstrap.com/) framework and [Bootswatch](http://bootswatch.com/) themes integration for the [yellow](https://github.com/datenstrom/yellow) flat-file CMS system.
+
+This plugin requires the [Yellow jQuery Plugin](https://github.com/nogginfuel/yellow-plugin-jquery) to work properly.
+
+## Installation
+
+* Copy `bootstrap.php` plugin file into system/plugins folder.
+* Copy `bootstrap-navigation.php` navigation file into system/themes/snippets folder.
+* Copy `bootstrap.css` theme file into system/themes folder.
+
+## Configuration
+
+`bootstrapCdnCSS` and `bootstrapCdnJS` settings point to the [Bootstrap CDN](https://www.bootstrapcdn.com/) v3.3.6 by default.
+
+If you need to change the default CDN URLs, you can add one or both key settings in system/config/config.ini.
+
+The following example sets the CMS to use the [cerulean](http://bootswatch.com/cerulean/) v3.3.6 Bootswatch theme:
+```
+bootstrapCdnCSS: https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css
+```
