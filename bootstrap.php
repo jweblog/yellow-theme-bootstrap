@@ -4,7 +4,7 @@
 
 class YellowBootstrap
 {
-	const Version = "0.0.3";
+	const Version = "0.0.4";
 	var $yellow;
 
 	// Handle initialisation
@@ -13,16 +13,14 @@ class YellowBootstrap
 		$this->yellow = $yellow;
 		if(!$this->yellow->config->isExisting("jqueryCdn"))
 		{
-		   $this->yellow->config->setDefault("jqueryCdn", "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/");
+			$this->yellow->config->setDefault("jqueryCdn",
+				"https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/");
 		}
-		if(!$this->yellow->config->isExisting("bootstrapCdnCSS"))
-		{
-			$this->yellow->config->setDefault("bootstrapCdnCSS", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
-		}
-		if(!$this->yellow->config->isExisting("bootstrapCdnJS"))
-		{
-			$this->yellow->config->setDefault("bootstrapCdnJS", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js");
-		}
+		$this->yellow->config->setDefault("bootstrapCdnCSS",
+			"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/");
+
+		$this->yellow->config->setDefault("bootstrapCdnJS",
+			"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/");
 	}
 
 	// Handle page extra HTML data
@@ -36,8 +34,8 @@ class YellowBootstrap
 			$bsCSS = $this->yellow->config->get("bootstrapCdnCSS");
 
 			$output .= "<script type=\"text/javascript\" src=\"{$jqCDN}jquery.min.js\"></script>\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$bsJS}\"></script>\n";
-			$output .= "<link rel=\"stylesheet\" href=\"{$bsCSS}\">\n";
+			$output .= "<script type=\"text/javascript\" src=\"{$bsJS}bootstrap.min.js\"></script>\n";
+			$output .= "<link rel=\"stylesheet\" href=\"{$bsCSS}bootstrap.min.css\">\n";
 		}
 		return $output;
 	}
