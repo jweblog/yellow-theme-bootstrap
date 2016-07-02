@@ -2,7 +2,7 @@
 
 [Bootstrap](http://getbootstrap.com/) framework and [Bootswatch](http://bootswatch.com/) themes integration for the [Yellow](https://github.com/datenstrom/yellow) flat-file CMS system.
 
-![](bootswatch-united.png)
+![](screenshot.png)
 
 ## Installation
 
